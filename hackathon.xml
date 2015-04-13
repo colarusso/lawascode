@@ -1,4 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <hackathons>
+	<hackathon>
+		<name>LITSA Hackathon</name>
+		<url>http://suffolklawsba.com/hackathon/</url>
+		<start>20150402</start>
+		<end>20150415</end>
+		<hosts>Suffolk Law School</hosts>
+		<location>Boston, MA + the Interwebz</location>
+		<prize>$450 in prizes</prize>
+		<food>Pizza</food>
+		<description>
+			The LITSA Hackathon is an initiative to promote legal technologies. The competition entails participants creating a web based legal tool using QnA markup. The Hackathon is open to all ABA accredited law schools. This event is co-sponsored by the Intellectual Property Law Student Association. Law students may participate individually or in teams of two. The deadline for competition submissions is April 15th. No registration is required. Workspace with food and drinks will be provided on the weekend of April 11th and 12th, 11am-4pm in Rm. 375 for participants. The first place winner receives a $300 Visa gift card. The second place winner receives a $150 Visa gift card.
+		</description>
+	</hackathon>
+	<hackathon>
+		<name>PrototypeJam</name>
+		<url>https://law.mit.edu/prototypejam</url>
+		<start>20141114</start>
+		<end>20141116</end>
+		<location>Cambridge and Boston, MA</location>
+		<prize></prize>
+		<food></food>
+		<description>
+			The MIT Human Dynamics Lab, in collaboration with LawGives, UMKC Law School, Brooklyn Law School and the MIT Kerberos &amp; Internet Trust (MIT-KIT) Consortium, are working with City of Boston and Kansas City, MO to design and prototype an open source next generation interface for business interactions with city governments. Designed to work for key interact types such as business permits, small business assistance and grants, this collaboration will culminate with a combination of creative commons open licensed design-phase conceptual use cases and prototype open source, free and documented code. The creative commons and open source software license covering PrototypeJam contributions ensures that each collaborator and any city is free to use, contribute to or fork any of the projects worked on together. Every Wednesday from 4pm-6pm EST this projects related to this collaboration are developed by one or more of the partners at regular class sessions hosted by the MIT Media Lab, UMKC Law School and Brooklyn Law School.  An in-person prototype jam event is planned for November 14-16 when all the collaborators can work together on the project and plan a prototype user engagement test and final semester demo presentation.
+		</description>
+	</hackathon>
+	<hackathon>
+		<name>6.S086: Law is Code</name>
+		<url>http://courses.csail.mit.edu/iap/lawiscode/</url>
+		<start>20150109</start>
+		<end>20150123</end>
+		<location>Cambridge, MA</location>
+		<prize></prize>
+		<food>Coffee &amp; Bagels</food>
+		<description>
+			Can computing technologies help provide access to justice, provide legal aid more effectively, or make government and the law more open? In the U.S., nearly a million people are turned away from federally funded legal aid services a year; new, scalable solutions are needed. In 6.S086: Law is Code, small teams will learn about the challenges that legal aid organizations and public agencies face, choose a project, and develop software that addresses their need. We have solicited project ideas from a number of local groups and organizations, including the Committee of Public Counsel Services (CPCS), the Harvard Law School Legal Services Center, the Suffolk Accelerator-to-Practice Program and Greater Boston Legal Services. We are also open to your project ideas and interests!
+		</description>
+	</hackathon>
 	<hackathon>
 		<name></name>
 		<url></url>
@@ -7,7 +45,6 @@
 		<location></location>
 		<prize></prize>
 		<food></food>
-		<description>
-		</description>
+		<description></description>
 	</hackathon>
 </hackathons>
