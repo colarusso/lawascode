@@ -29,7 +29,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				 (<xsl:value-of select="location"/>)
 				</xsl:if>
 				</font>
-				<p><xsl:value-of select="description"/><br/><span style="float:right"><a href="">Visit Site >></a></span></p>
+				<p><xsl:value-of select="description"/><br/><span style="float:right;padding:5px;"><a href="{url}" class="visit" target="_blank">visit site</a></span></p>
 				</div>
 			</xsl:if>
 	</xsl:for-each>
