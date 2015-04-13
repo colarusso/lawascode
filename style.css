@@ -87,6 +87,13 @@ a.event {
 	line-height: 25px;
 }
 
+a.visit {
+	font-variant: small-caps;
+	color:red;
+	font-size: 18px;
+	line-height: 25px;
+}
+
 .title { 
 	font-size: 36px;
 	text-align:center;
