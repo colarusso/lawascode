@@ -5,7 +5,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="/">
 	<h2>Past Events &amp; Classes</h2>
 	<xsl:for-each select="hackathons/hackathon">
-		<xsl:sort select="end" order="ascending"/>
+		<xsl:sort select="end" order="descending"/>
 			<xsl:if test="$today > end">
 				<div style="border-top: solid 1px #bbb;padding:15px 0 25px 0;">
 				<xsl:if test="food != ''">
