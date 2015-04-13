@@ -4,6 +4,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:param name="today"/>
 <xsl:template match="/">
 	<h2>On Deck</h2>
+	<xsl:if test="count(hackathons/hackathon[end >= $today]) = 0">
+	<p>No events/classes found at this time. If you know of any, click the link below.</p>
+	</xsl:if>
 	<xsl:for-each select="hackathons/hackathon">
 		<xsl:sort select="end" order="ascending"/>
 			<xsl:if test="end >= $today">
