@@ -22,7 +22,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<b><xsl:value-of select="name"/></b>
 				</a><br/>
 				<font class="details">
-				<xsl:value-of select="substring(end/text(),1,4)"/>-<xsl:value-of select="substring(end/text(),5,2)"/>-<xsl:value-of select="substring(end/text(),7,2)"/>
+				<xsl:value-of select="substring(start/text(),1,4)"/>-<xsl:value-of select="substring(start/text(),5,2)"/>-<xsl:value-of select="substring(start/text(),7,2)"/>
 				 to 
 				<xsl:value-of select="substring(end/text(),1,4)"/>-<xsl:value-of select="substring(end/text(),5,2)"/>-<xsl:value-of select="substring(end/text(),7,2)"/>
 				<xsl:if test="location != ''">
