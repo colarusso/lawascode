@@ -5,7 +5,7 @@ This repo hosts the [Law as Cose website](http://www.lawascode.org)--a list of p
 
 If you'd like to add or edit a listing, you have two options:
 
-1. Add to/edit `hackthons.xml`, and make a pull request.
+1. Add to/edit [`hackthons.xml`](https://github.com/colarusso/lawascode/blob/gh-pages/hackathon.xml), and make a pull request.
 2. Email the details of your addition/edit to the the curator. 
 
 ### Make a Pull Request
