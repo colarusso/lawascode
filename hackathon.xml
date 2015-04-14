@@ -38,6 +38,18 @@
 		</description>
 	</hackathon>
 	<hackathon>
+		<name>Lawyering in an Age of Smart Machines</name>
+		<url>https://www.suffolk.edu/law/academics/degrees/jd/23600.php?CourseID=571</url>
+		<start>2015-01-20</start>
+		<end>2015-05-13</end>
+		<location>Boston, MA (Suffolk University Law School</location>
+		<prize></prize>
+		<food></food>
+		<description>
+			Some legal work can be done by software systems that embody specialized knowledge and know-how. Often these operate as power tools in the hands of skilled practitioners. But increasingly they are being used directly by consumers. What challenges, opportunities, and responsibilities do these developments pose for lawyers? Each student will build an illustrative software application, for concrete exposure to aspects of legal knowledge engineering. By coordinating with the multi-school ‘Apps 4 Justice’ initiative, students will produce results that help real people with real legal issues.
+		</description>
+	</hackathon>
+	<hackathon>
 		<name></name>
 		<url></url>
 		<start></start>
