@@ -11,12 +11,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:sort select="end" order="ascending"/>
 			<xsl:if test="end >= $today">
 				<div style="border-top: solid 1px #bbb;padding:15px 0 25px 0;">
-				<xsl:if test="food">
+				<xsl:if test="food != ''">
 					<div class="food">
 					<xsl:value-of select="food"/>
 					</div>
 				</xsl:if>
-				<xsl:if test="prize">
+				<xsl:if test="prize != ''">
 					<div class="prize">
 					<xsl:value-of select="prize"/>
 					</div>
@@ -28,7 +28,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:value-of select="substring(start/text(),1,4)"/>-<xsl:value-of select="substring(start/text(),5,2)"/>-<xsl:value-of select="substring(start/text(),7,2)"/>
 				 to 
 				<xsl:value-of select="substring(end/text(),1,4)"/>-<xsl:value-of select="substring(end/text(),5,2)"/>-<xsl:value-of select="substring(end/text(),7,2)"/>
-				<xsl:if test="location">
+				<xsl:if test="location != ''">
 				 (<xsl:value-of select="location"/>)
 				</xsl:if>
 				</font>
