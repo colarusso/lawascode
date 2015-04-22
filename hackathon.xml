@@ -60,6 +60,16 @@
 		<description>Join us in a novel collaboration with the American Bar Association Techshow for the "Online Legal Appathon" and innovate the field, practice and service of law. Learn to use an array of open source and other common tools for building creative applications of technology to address key challenges faced by lawyers, clients and society. This online event will provide educational opportunities to understand, learn to use and build powerful cutting edge tools like, including QnA Markup.</description>
 	</hackathon>
 	<hackathon>
+		<name>2015 ABA/NLADA Equal Justice Works Conference</name>
+		<url>http://www.lawascode.org/ejc/</url>
+		<start>20150507</start>
+		<end>20150507</end>
+		<location>Austin, Texas</location>
+		<prize></prize>
+		<food></food>
+		<description>As part of the pannel discussion Pro Bono: How to Power Your Pro Bono Practice With Apps, software developers and attorneys will explore how public service attorneys can leverage technology to improve their practice, including: (1) how to frame a viable app idea for developers; (2) how to teach yourself to code; (3) what is involved in building an app; and (4) what resources are available to assist attorneys in making their pro bono "dream apps" a reality.</description>
+	</hackathon>
+	<hackathon>
 		<name></name>
 		<url></url>
 		<start></start>
