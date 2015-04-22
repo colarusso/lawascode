@@ -50,6 +50,16 @@
 		</description>
 	</hackathon>
 	<hackathon>
+		<name>Coding and Law: Empowering Practice through Software Development</name>
+		<url>https://www.bostonbar.org/membership/events/event-details?ID=18144</url>
+		<start>20150316</start>
+		<end>20150316</end>
+		<location>Boston Bar Association - 16 Beacon Street, Boston, MA</location>
+		<prize></prize>
+		<food></food>
+		<description>Empower your practice by keeping up to date on current technology. During this program, attendees will learn how to utilize tools such as QnA Markup and common app development languages to streamline your work. The benefits of learning a programming language and creating apps for your own practice will be discussed, as well as ethical issues to keep in mind.</description>
+	</hackathon>
+	<hackathon>
 		<name>ABA Techshow &amp; MIT Media Lab Online Legal Appathon</name>
 		<url>http://law.mit.edu/Appathon</url>
 		<start>20150415</start>
