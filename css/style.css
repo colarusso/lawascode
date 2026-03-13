@@ -1,0 +1,237 @@
+body {
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	background: linear-gradient(to bottom, #004261, #2f6aa7) 0 51px / 100% 51px no-repeat #fff;
+	background-color: #fff;
+	background-repeat: repeat-x;
+	background-position: top 0px center;
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.conversation {
+	margin:0px auto 0 auto;
+	padding:0 15px;
+	max-width:900px
+}
+
+#icon {
+	z-index:2;
+	float:left;
+	margin:-12px 13px 5px -8px;
+	border-radius: 50%;
+	background-size: 48px 48px;
+	background-image: url('../images/d20.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	width:60px;
+	height:60px;
+	text-align: center;
+	border: 2px solid #fff;
+	background-color: #000;
+	font-family: 'Courier New', Courier, monospace;
+	font-size:18px;
+	line-height:98px;
+	color:#00ff00;
+}
+
+.about {
+	float:right;
+	z-index: 100;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+	padding-right: 15px;
+}
+
+a.about {
+	color:white;
+	padding-right: 0px;
+}
+
+.menu_title {
+	margin: 15px 0 0 0;
+	color:white;
+	font-size: 24px;
+	line-height: 35px;
+}
+
+.title {
+	font-size: 36px;
+	line-height: 40px;
+	text-align:center;
+	width:100%;
+	font-variant: small-caps;
+}
+
+
+  .button-container {
+	display: flex;
+	justify-content: center;
+  }
+  
+
+  button {
+    margin: 0 5px; /* Add some space between the buttons */
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #2f6aa7;
+    color: white;
+    border-radius: 5px;
+	border: 0px;
+  }
+
+
+
+  button:hover {
+    background-color: #19487a;
+  }
+
+  a.anchor, a.anchor:focus {
+	display:block;
+	float:right;
+	margin-left:30px;
+	width:22px;
+	height:16px;
+	margin-bottom: 10px;
+	background-image: url("../images/link.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	outline: none;
+}
+
+hr {
+	border: solid 0px; 
+	border-bottom: solid 1px #a9a9a9;
+	margin: 15px 0 15px 0;
+	float:left;width:100%;
+}
+
+.byline {
+	float:left;
+	font-size: small;
+}
+
+.ex, a.ex{
+	float:left;
+	margin-right:8px;
+	border: 1px solid #b8b8b8;
+	border-radius: 50%;
+	font-size: 12px;
+	line-height: 18px;
+	width:20px;
+	text-decoration:none;
+	color:#6c6b6b
+}
+
+#msg_bar {
+	display:none;
+	position: relative;
+	width:100%;
+	background:#ffffb8;;
+	color: #6c6b6b;
+	text-align: center;
+	padding: 10px 15px 12px 15px;
+	margin-top: 25px;
+	border-radius: 4px;
+	border: 1px solid #b8b8b8;
+	font-size: 14px;
+	line-height: 18px;
+	font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+		box-sizing: border-box;
+}
+
+.profile_vid {
+	box-sizing: border-box;
+	float:left;
+	margin:0px 0px 15px 0;
+	width:900px;
+	height:510px;
+}
+
+.vid_wrapper {
+	box-sizing: border-box;
+	float:left;
+	padding-bottom:25px;
+}
+
+.embed_vid {
+	box-sizing: border-box;
+	background:black;
+	background-size: 900px 510px;
+	width:900px;
+	height:510px;
+}
+
+@media only screen and (max-width: 900px) {
+	.vid_wrapper {
+		position:relative;
+		width:100%;
+	}
+	.profile_vid {
+		float:none;
+		width:100%;
+	}
+	.embed_vid {
+		float:none;
+		width:100%;
+		background-size: 100% 510px;
+	}
+}
+
+
+.footer_links {
+	float:right;
+	font-size: small;
+}
+
+.footer {
+	float:left;
+	width:100%;
+	border-top: solid 1px #555;
+	padding:15px 0px 40px 0px;
+	font-size: 14px;
+	line-height: 18px;
+	color:#555;
+}
+
+a.foota {
+	color:#555;
+}
+
+.table_display{
+	margin: 0 auto;
+	max-width:1000px;
+	overflow-x: auto;
+	text-align: center;
+}
+
+table {
+	width:100%;
+}
+
+table, th, td {
+	border: 1px solid;
+	border-collapse: collapse;
+	padding:4px;
+}
+
+blockquote {
+	margin-left: 10px;
+	border-left: 4px solid #a2a2a2;
+	padding-left: 20px;
+}
+
+@media (max-width: 400px) {
+	.footer_links {
+		text-align: center;
+		width:100%;
+	}
+
+	.byline {
+		text-align: center;
+		width:100%;
+	}
+}
+
