@@ -1,0 +1,29 @@
+[
+  {
+    "title": "TokenExplorer",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "Students manipulate temperature settings and watch probability distributions shift in real time, making the statistical nature of LLMs visible.",
+    "url": "https://token-explorer-rlfordon.replit.app/",
+    "github": "https://github.com/rlfordon/TokenExplorer",
+    "screenshot": "images/showcase/token-explorer.png",
+    "tags": ["LLMs", "interactive demo"]
+  },
+  {
+    "title": "Due Process: Screening vs. Diagnostic Tests",
+    "by": "David Colarusso",
+    "byUrl": "https://www.davidcolarusso.com/",
+    "description": "Due process simulation. Adjust parameters for a multi-stage legal system to see how test characteristics and the balance of costs shift across populations.",
+    "url": "https://screening-vs-diagnostic-tests-50382557550.us-west1.run.app/",
+    "source": "https://suffolklitlab.org/algos-bias-due-process-you/",
+    "screenshot": "images/showcase/screening-diagnostic.png",
+    "tags": ["due process", "simulation"]
+  },
+  {
+    "title": "Jennifer's tool — coming soon",
+    "by": "Jennifer Wondracek",
+    "description": "Placeholder card. Jennifer will fill this in with a tool from her teaching practice — title, description, screenshot, and links.",
+    "tags": [],
+    "placeholder": true
+  }
+]

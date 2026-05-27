@@ -178,5 +178,114 @@
   </div>
 </div>
 
+<script>
+(function () {
+  function slug(s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+
+  function renderCard(entry) {
+    var card = document.createElement('div');
+    card.className = 'card' + (entry.placeholder ? ' placeholder' : '');
+    card.setAttribute('data-author', slug(entry.by));
+
+    // Screenshot
+    var shot = document.createElement('div');
+    shot.className = 'shot';
+    if (entry.screenshot) {
+      shot.style.backgroundImage = "url('" + entry.screenshot + "')";
+    }
+    card.appendChild(shot);
+
+    // Body
+    var body = document.createElement('div');
+    body.className = 'body';
+
+    var h3 = document.createElement('h3');
+    h3.textContent = entry.title;
+    body.appendChild(h3);
+
+    var by = document.createElement('p');
+    by.className = 'by';
+    if (entry.byUrl) {
+      var a = document.createElement('a');
+      a.href = entry.byUrl;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = 'By ' + entry.by;
+      by.appendChild(a);
+    } else {
+      by.textContent = 'By ' + entry.by;
+    }
+    body.appendChild(by);
+
+    var descr = document.createElement('p');
+    descr.className = 'descr';
+    descr.textContent = entry.description;
+    body.appendChild(descr);
+
+    if (entry.tags && entry.tags.length) {
+      var tags = document.createElement('div');
+      tags.className = 'tags';
+      entry.tags.forEach(function (t) {
+        var tag = document.createElement('span');
+        tag.className = 'tag';
+        tag.textContent = t;
+        tags.appendChild(tag);
+      });
+      body.appendChild(tags);
+    }
+
+    var links = document.createElement('div');
+    links.className = 'links';
+    if (entry.url) {
+      var tryIt = document.createElement('a');
+      tryIt.href = entry.url;
+      tryIt.target = '_blank';
+      tryIt.rel = 'noopener';
+      tryIt.textContent = 'Try it →';
+      links.appendChild(tryIt);
+    }
+    if (entry.github) {
+      var gh = document.createElement('a');
+      gh.href = entry.github;
+      gh.target = '_blank';
+      gh.rel = 'noopener';
+      gh.textContent = 'GitHub';
+      links.appendChild(gh);
+    }
+    if (entry.source) {
+      var src = document.createElement('a');
+      src.href = entry.source;
+      src.target = '_blank';
+      src.rel = 'noopener';
+      src.textContent = 'About';
+      links.appendChild(src);
+    }
+    if (links.childNodes.length) body.appendChild(links);
+
+    card.appendChild(body);
+    return card;
+  }
+
+  fetch('gallery.json')
+    .then(function (r) { return r.json(); })
+    .then(function (entries) {
+      var grid = document.getElementById('grid');
+      grid.innerHTML = '';
+      if (!entries.length) {
+        var empty = document.createElement('p');
+        empty.className = 'empty';
+        empty.textContent = 'No entries yet.';
+        grid.appendChild(empty);
+        return;
+      }
+      entries.forEach(function (e) { grid.appendChild(renderCard(e)); });
+    })
+    .catch(function (err) {
+      var grid = document.getElementById('grid');
+      grid.innerHTML = '<p class="empty">Could not load gallery.json: ' + err.message + '</p>';
+    });
+})();
+</script>
+
 </BODY>
 </HTML>
