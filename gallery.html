@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+  <title>Tool Gallery — Law as Code</title>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Tool Gallery — Law as Code"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    /* Gallery-specific styles */
+    h2.gallery-title {
+      font-variant: small-caps;
+      font-size: 28px;
+      margin: 30px 0 4px 0;
+      color: #1a1a1a;
+    }
+    .gallery-sub {
+      color: #666;
+      font-size: 14px;
+      margin: 0 0 24px 0;
+    }
+
+    /* Filter pills */
+    .filters {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    }
+    .filter-label {
+      font-size: 11px;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-right: 4px;
+    }
+    .pill {
+      padding: 5px 12px;
+      border-radius: 14px;
+      font-size: 13px;
+      background: #f0f0f0;
+      color: #555;
+      border: 1px solid #ddd;
+      cursor: pointer;
+    }
+    .pill:hover { background: #e8e8e8; }
+    .pill.active {
+      background: #2f6aa7;
+      color: white;
+      border-color: #2f6aa7;
+    }
+
+    /* Card grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #d4d4d4;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .card .shot {
+      height: 140px;
+      background: #f4f4f4;
+      border-bottom: 1px solid #e0e0e0;
+      background-size: cover;
+      background-position: top center;
+    }
+    .card .body {
+      padding: 12px 14px 14px 14px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card h3 {
+      font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+      font-size: 17px;
+      margin: 0 0 2px 0;
+      color: #1a1a1a;
+      line-height: 22px;
+    }
+    .card .by {
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      font-size: 11px;
+      color: #999;
+      margin: 0 0 8px 0;
+    }
+    .card .by a {
+      color: #999;
+      text-decoration: none;
+    }
+    .card .by a:hover { text-decoration: underline; }
+    .card .descr {
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      line-height: 18px;
+      color: #444;
+      margin: 0 0 10px 0;
+      flex: 1;
+    }
+    .card .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+    .card .tag {
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      font-size: 10px;
+      padding: 2px 7px;
+      background: #eef2f7;
+      color: #4a5a72;
+      border-radius: 10px;
+    }
+    .card .links {
+      display: flex;
+      gap: 14px;
+      padding-top: 8px;
+      border-top: 1px solid #eee;
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+    }
+    .card .links a {
+      color: #2f6aa7;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .card .links a:hover { text-decoration: underline; }
+
+    /* Empty state */
+    .empty {
+      color: #999;
+      font-size: 14px;
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</HEAD>
+<BODY BGCOLOR="#ffffff" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<div class="conversation">
+  <h2 class="menu_title"><a href="."><div id="icon"></div></a>Law as Code</h2>
+
+  <h2 class="gallery-title">Tool Gallery</h2>
+  <p class="gallery-sub">Interactive teaching tools we vibe-coded for legal education. Filter by author below.</p>
+
+  <div class="filters" id="filters"></div>
+
+  <div class="grid" id="grid">
+    <p class="empty">Loading…</p>
+  </div>
+
+  <noscript>
+    <p class="empty">This gallery requires JavaScript to render. The full list of tools is in <a href="gallery.json"><code>gallery.json</code></a>.</p>
+  </noscript>
+
+  <div class="footer" style="margin-top: 40px;">
+    <span class="byline">
+      By <a href="https://www.davidcolarusso.com/" target="_blank">David Colarusso</a> &amp;
+      <a href="https://moritzlaw.osu.edu/rebecca-fordon" target="_blank">Rebecca Fordon</a>
+    </span>
+  </div>
+</div>
+
+</BODY>
+</HTML>
