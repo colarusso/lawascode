@@ -266,6 +266,58 @@
     return card;
   }
 
+  function applyFilter(authorSlug) {
+    var cards = document.querySelectorAll('#grid .card');
+    cards.forEach(function (c) {
+      if (authorSlug === 'all' || c.getAttribute('data-author') === authorSlug) {
+        c.style.display = '';
+      } else {
+        c.style.display = 'none';
+      }
+    });
+    document.querySelectorAll('#filters .pill').forEach(function (p) {
+      p.classList.toggle('active', p.getAttribute('data-slug') === authorSlug);
+    });
+  }
+
+  function renderPills(entries) {
+    var filters = document.getElementById('filters');
+    filters.innerHTML = '';
+
+    var label = document.createElement('span');
+    label.className = 'filter-label';
+    label.textContent = 'By:';
+    filters.appendChild(label);
+
+    var pillData = [{ slug: 'all', label: 'All' }];
+    var seen = {};
+    entries.forEach(function (e) {
+      var s = slug(e.by);
+      if (!seen[s]) { seen[s] = true; pillData.push({ slug: s, label: e.by }); }
+    });
+
+    pillData.forEach(function (p) {
+      var btn = document.createElement('span');
+      btn.className = 'pill';
+      btn.setAttribute('data-slug', p.slug);
+      btn.textContent = p.label;
+      btn.addEventListener('click', function () {
+        if (p.slug === 'all') {
+          history.replaceState(null, '', window.location.pathname);
+        } else {
+          window.location.hash = 'by=' + p.slug;
+        }
+        applyFilter(p.slug);
+      });
+      filters.appendChild(btn);
+    });
+  }
+
+  function currentFilterFromHash() {
+    var m = (window.location.hash || '').match(/by=([a-z0-9-]+)/);
+    return m ? m[1] : 'all';
+  }
+
   fetch('gallery.json')
     .then(function (r) { return r.json(); })
     .then(function (entries) {
@@ -279,6 +331,11 @@
         return;
       }
       entries.forEach(function (e) { grid.appendChild(renderCard(e)); });
+      renderPills(entries);
+      applyFilter(currentFilterFromHash());
+      window.addEventListener('hashchange', function () {
+        applyFilter(currentFilterFromHash());
+      });
     })
     .catch(function (err) {
       var grid = document.getElementById('grid');
