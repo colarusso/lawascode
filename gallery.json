@@ -10,6 +10,160 @@
     "tags": ["LLMs", "interactive demo"]
   },
   {
+    "title": "Prompt Coach",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "Split-panel app where students draft prompts on the left and receive real-time AI coaching on technique, confidentiality, and professional judgment on the right.",
+    "url": "https://prompt-coach-21cl.replit.app/",
+    "github": "https://github.com/rlfordon/prompt-coach",
+    "screenshot": "images/showcase/prompt-coach.png",
+    "tags": ["prompting", "AI coaching"]
+  },
+  {
+    "title": "QnA Markup Screener",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "Client intake screener for wage-and-hour claims built with QnA Markup. Students see legal rules as logic: if/then branching based on employer size and hourly rate.",
+    "url": "https://www.qnamarkup.org/i/?source=https://raw.githubusercontent.com/rlfordon/vibe-coding-workshop/main/scratch/qna-markup-screener.txt",
+    "screenshot": "images/showcase/qna-markup.png",
+    "tags": ["decision trees", "legal aid"]
+  },
+  {
+    "title": "Decision Tree to QnA Markup Gem",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "A Gemini Gem that bridges domain knowledge and technical implementation — students describe their logic and it generates QnA Markup.",
+    "url": "https://gemini.google.com/gem/1_GIi-Fpe8LCCNVsTSvUPQ2Dvv3LV0osX?usp=sharing",
+    "screenshot": "images/showcase/qna-gem.png",
+    "tags": ["Gemini Gems", "automation"]
+  },
+  {
+    "title": "Ohio Unpaid Wages Screener",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "The same decision tree vibe-coded into a React app in under 3 minutes. Used as a cliffhanger to introduce vibe coding and spark discussion.",
+    "url": "https://gemini.google.com/share/47c8616ea640",
+    "screenshot": "images/showcase/wage-screener.png",
+    "tags": ["vibe coding", "React"]
+  },
+  {
+    "title": "Citation Extractor Gem",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "A Gemini Gem that extracts all case citations from an uploaded brief into a structured table, ready for verification on Westlaw and Lexis.",
+    "url": "https://gemini.google.com/gem/1BYDV9gF0DbH0rQF9L2FqnCgOU0ju9oOT",
+    "screenshot": "images/showcase/citation-extractor.png",
+    "tags": ["citations", "Gemini Gems"]
+  },
+  {
+    "title": "Citation Hallucination Game",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "Competitive team exercise where students create hallucinated citations, then try to catch another team's fakes under time pressure.",
+    "url": "https://hallucination-game.replit.app/",
+    "github": "https://github.com/rlfordon/hallucination-game",
+    "screenshot": "images/showcase/hallucination-game.png",
+    "tags": ["hallucinations", "team exercise"]
+  },
+  {
+    "title": "Document Tech Gallery",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "Seven quick interactive demos (~60 seconds each) covering automation, clause libraries, editing, verification, metadata, redaction, and contract review.",
+    "url": "https://doc-tech-gallery.onrender.com",
+    "github": "https://github.com/rlfordon/doc-tech-gallery",
+    "screenshot": "images/showcase/doc-tech-gallery.png",
+    "tags": ["document tech", "interactive demos"]
+  },
+  {
+    "title": "Docket Q&A",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "AI-powered tool for querying bankruptcy case documents from the RECAP Archive. Ask questions about a case and get answers grounded in the actual filings.",
+    "url": "https://bankruptcy-docket-qanda.onrender.com",
+    "github": "https://github.com/rlfordon/docket-qna",
+    "screenshot": "images/showcase/docket-qna.png",
+    "tags": ["research", "AI", "bankruptcy"]
+  },
+  {
+    "title": "Citation Verifier",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "Verify legal citations at scale — check whether case citations in a brief are real and accurately cited.",
+    "url": "https://verify-and-retrieve.replit.app/",
+    "github": "https://github.com/rlfordon/citation-verifier",
+    "screenshot": "images/showcase/citation-verifier.png",
+    "tags": ["research", "citations"]
+  },
+  {
+    "title": "AI-Powered Lawyering Heatmap",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "Interactive visualization comparing how reasoning models and RAG perform against human-only legal work across specialized tasks.",
+    "url": "https://gemini.google.com/share/22471ef31949",
+    "screenshot": "images/showcase/ai-lawyering-heatmap.png",
+    "tags": ["research", "visualization"]
+  },
+  {
+    "title": "4th Amendment Search & Seizure Analysis",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "Interactive decision tree walking through the gates of Fourth Amendment analysis — applicability, reasonable expectation of privacy, and warrant requirements — with case law at each step.",
+    "url": "https://gemini.google.com/share/c7ba3b487abf",
+    "screenshot": "images/showcase/4th-amendment.png",
+    "tags": ["constitutional law", "decision trees"]
+  },
+  {
+    "title": "Career Landscape Explorer",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "Interactive tool where students explore how AI reshapes legal careers — browse by practice area or firm type, see a five-variable impact framework adapted from the O-Ring model.",
+    "url": "https://career-landscape.onrender.com/",
+    "github": "https://github.com/rlfordon/career-landscape",
+    "screenshot": "images/showcase/career-landscape.png",
+    "tags": ["careers", "AI impact"]
+  },
+  {
+    "title": "eDiscovery Simulator",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "Students play a junior associate navigating EDRM phases on a fictional employment case — compare keyword search, TAR/CAL, and GenAI-assisted review across 100 mock documents.",
+    "url": "https://ediscovery-simulator.onrender.com/",
+    "github": "https://github.com/rlfordon/ediscovery-simulator",
+    "screenshot": "images/showcase/ediscovery-simulator.png",
+    "tags": ["eDiscovery", "simulation"]
+  },
+  {
+    "title": "DHS AI Use Case Explorer",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "Searchable explorer of 236 AI systems in the DHS inventory, with curated watchdog annotations from the Brennan Center, EFF, and others, plus bias taxonomy flags.",
+    "url": "https://rlfordon.github.io/dhs-ai-explorer/",
+    "github": "https://github.com/rlfordon/dhs-ai-explorer",
+    "screenshot": "images/showcase/dhs-ai-explorer.png",
+    "tags": ["AI policy", "government", "bias"]
+  },
+  {
+    "title": "Excel Formula Explorer",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "Interactive app teaching Excel text functions through a fictional law firm merger scenario — guided demos with an Excel-like grid, formula bar, and hands-on sandboxes for each function.",
+    "url": "https://spreadsheet-sandbox.onrender.com",
+    "github": "https://github.com/rlfordon/spreadsheet-sandbox",
+    "screenshot": "images/showcase/spreadsheet-sandbox.png",
+    "tags": ["Excel", "data cleaning"]
+  },
+  {
+    "title": "Boolean Search Builder",
+    "by": "Rebecca Fordon",
+    "byUrl": "https://moritzlaw.osu.edu/rebecca-fordon",
+    "description": "Step-by-step wizard that guides students through building precise Boolean queries for Westlaw, Lexis, and Bloomberg — handles parentheses, proximity connectors, and truncation automatically.",
+    "url": "https://booleanbuilder.replit.app/",
+    "github": "https://github.com/rlfordon/BooleanBuilder",
+    "screenshot": "images/showcase/boolean-builder.png",
+    "tags": ["legal research", "Boolean search"]
+  },
+  {
     "title": "Due Process: Screening vs. Diagnostic Tests",
     "by": "David Colarusso",
     "byUrl": "https://www.davidcolarusso.com/",
