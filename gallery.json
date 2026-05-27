@@ -199,5 +199,12 @@
     "description": "Placeholder card. Jennifer will fill this in with a tool from her teaching practice — title, description, screenshot, and links.",
     "tags": [],
     "placeholder": true
+  },
+  {
+    "title": "Jennifer's second tool — coming soon",
+    "by": "Jennifer Wondracek",
+    "description": "Another placeholder. Edit this entry to add Jennifer's tool details — title, description, screenshot, and links.",
+    "tags": [],
+    "placeholder": true
   }
 ]

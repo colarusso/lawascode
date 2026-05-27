@@ -135,6 +135,23 @@
     }
     .card .links a:hover { text-decoration: underline; }
 
+    .card.placeholder {
+      border-style: dashed;
+      opacity: 0.75;
+    }
+    .card.placeholder .shot {
+      background: repeating-linear-gradient(45deg, #f4f4f4, #f4f4f4 8px, #ebebeb 8px, #ebebeb 16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      font-size: 11px;
+    }
+    .card.placeholder .shot::after {
+      content: "Add screenshot";
+    }
+
     /* Empty state */
     .empty {
       color: #999;
