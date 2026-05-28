@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+  <title>Tool Gallery — Law as Code</title>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Tool Gallery — Law as Code"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    /* Gallery-specific styles */
+    h2.gallery-title {
+      font-variant: small-caps;
+      font-size: 28px;
+      margin: 30px 0 4px 0;
+      color: #1a1a1a;
+    }
+    .gallery-sub {
+      color: #666;
+      font-size: 14px;
+      margin: 0 0 24px 0;
+    }
+
+    /* Filter pills */
+    .filters {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    }
+    .filter-label {
+      font-size: 11px;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-right: 4px;
+    }
+    .pill {
+      padding: 5px 12px;
+      border-radius: 14px;
+      font-size: 13px;
+      background: #f0f0f0;
+      color: #555;
+      border: 1px solid #ddd;
+      cursor: pointer;
+    }
+    .pill:hover { background: #e8e8e8; }
+    .pill.active {
+      background: #2f6aa7;
+      color: white;
+      border-color: #2f6aa7;
+    }
+
+    /* Card grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #d4d4d4;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .card .shot {
+      height: 140px;
+      background: #f4f4f4;
+      border-bottom: 1px solid #e0e0e0;
+      background-size: cover;
+      background-position: top center;
+    }
+    .card .body {
+      padding: 12px 14px 14px 14px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card h3 {
+      font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+      font-size: 17px;
+      margin: 0 0 2px 0;
+      color: #1a1a1a;
+      line-height: 22px;
+    }
+    .card .by {
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      font-size: 11px;
+      color: #999;
+      margin: 0 0 8px 0;
+    }
+    .card .by a {
+      color: #999;
+      text-decoration: none;
+    }
+    .card .by a:hover { text-decoration: underline; }
+    .card .descr {
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      line-height: 18px;
+      color: #444;
+      margin: 0 0 10px 0;
+      flex: 1;
+    }
+    .card .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+    .card .tag {
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      font-size: 10px;
+      padding: 2px 7px;
+      background: #eef2f7;
+      color: #4a5a72;
+      border-radius: 10px;
+    }
+    .card .links {
+      display: flex;
+      gap: 14px;
+      padding-top: 8px;
+      border-top: 1px solid #eee;
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+    }
+    .card .links a {
+      color: #2f6aa7;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .card .links a:hover { text-decoration: underline; }
+
+    .card.placeholder {
+      border-style: dashed;
+      opacity: 0.75;
+    }
+    .card.placeholder .shot {
+      background: repeating-linear-gradient(45deg, #f4f4f4, #f4f4f4 8px, #ebebeb 8px, #ebebeb 16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      font-size: 11px;
+    }
+    .card.placeholder .shot::after {
+      content: "Add screenshot";
+    }
+
+    /* Empty state */
+    .empty {
+      color: #999;
+      font-size: 14px;
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</HEAD>
+<BODY BGCOLOR="#ffffff" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<div class="conversation">
+  <h2 class="menu_title"><a href="."><div id="icon"></div></a>Law as Code</h2>
+
+  <h2 class="gallery-title">Tool Gallery</h2>
+  <p class="gallery-sub">Interactive teaching tools we vibe-coded for legal education. Filter by author below.</p>
+
+  <div class="filters" id="filters"></div>
+
+  <div class="grid" id="grid">
+    <p class="empty">Loading…</p>
+  </div>
+
+  <noscript>
+    <p class="empty">This gallery requires JavaScript to render. The full list of tools is in <a href="gallery.json"><code>gallery.json</code></a>.</p>
+  </noscript>
+
+  <div class="footer" style="margin-top: 40px;">
+    <span class="byline">
+      By <a href="https://www.davidcolarusso.com/" target="_blank">David Colarusso</a> &amp;
+      <a href="https://moritzlaw.osu.edu/rebecca-fordon" target="_blank">Rebecca Fordon</a>
+    </span>
+  </div>
+</div>
+
+<script>
+(function () {
+  function slug(s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+
+  function renderCard(entry) {
+    var card = document.createElement('div');
+    card.className = 'card' + (entry.placeholder ? ' placeholder' : '');
+    card.setAttribute('data-author', slug(entry.by));
+
+    // Screenshot
+    var shot = document.createElement('div');
+    shot.className = 'shot';
+    if (entry.screenshot) {
+      shot.style.backgroundImage = "url('" + entry.screenshot + "')";
+    }
+    card.appendChild(shot);
+
+    // Body
+    var body = document.createElement('div');
+    body.className = 'body';
+
+    var h3 = document.createElement('h3');
+    h3.textContent = entry.title;
+    body.appendChild(h3);
+
+    var by = document.createElement('p');
+    by.className = 'by';
+    if (entry.byUrl) {
+      var a = document.createElement('a');
+      a.href = entry.byUrl;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = 'By ' + entry.by;
+      by.appendChild(a);
+    } else {
+      by.textContent = 'By ' + entry.by;
+    }
+    body.appendChild(by);
+
+    var descr = document.createElement('p');
+    descr.className = 'descr';
+    descr.textContent = entry.description;
+    body.appendChild(descr);
+
+    if (entry.tags && entry.tags.length) {
+      var tags = document.createElement('div');
+      tags.className = 'tags';
+      entry.tags.forEach(function (t) {
+        var tag = document.createElement('span');
+        tag.className = 'tag';
+        tag.textContent = t;
+        tags.appendChild(tag);
+      });
+      body.appendChild(tags);
+    }
+
+    var links = document.createElement('div');
+    links.className = 'links';
+    if (entry.url) {
+      var tryIt = document.createElement('a');
+      tryIt.href = entry.url;
+      tryIt.target = '_blank';
+      tryIt.rel = 'noopener';
+      tryIt.textContent = 'Try it →';
+      links.appendChild(tryIt);
+    }
+    if (entry.github) {
+      var gh = document.createElement('a');
+      gh.href = entry.github;
+      gh.target = '_blank';
+      gh.rel = 'noopener';
+      gh.textContent = 'GitHub';
+      links.appendChild(gh);
+    }
+    if (entry.source) {
+      var src = document.createElement('a');
+      src.href = entry.source;
+      src.target = '_blank';
+      src.rel = 'noopener';
+      src.textContent = 'About';
+      links.appendChild(src);
+    }
+    if (links.childNodes.length) body.appendChild(links);
+
+    card.appendChild(body);
+    return card;
+  }
+
+  function applyFilter(authorSlug) {
+    var cards = document.querySelectorAll('#grid .card');
+    cards.forEach(function (c) {
+      if (authorSlug === 'all' || c.getAttribute('data-author') === authorSlug) {
+        c.style.display = '';
+      } else {
+        c.style.display = 'none';
+      }
+    });
+    document.querySelectorAll('#filters .pill').forEach(function (p) {
+      p.classList.toggle('active', p.getAttribute('data-slug') === authorSlug);
+    });
+  }
+
+  function renderPills(entries) {
+    var filters = document.getElementById('filters');
+    filters.innerHTML = '';
+
+    var label = document.createElement('span');
+    label.className = 'filter-label';
+    label.textContent = 'By:';
+    filters.appendChild(label);
+
+    var pillData = [{ slug: 'all', label: 'All' }];
+    var seen = {};
+    entries.forEach(function (e) {
+      var s = slug(e.by);
+      if (!seen[s]) { seen[s] = true; pillData.push({ slug: s, label: e.by }); }
+    });
+
+    pillData.forEach(function (p) {
+      var btn = document.createElement('span');
+      btn.className = 'pill';
+      btn.setAttribute('data-slug', p.slug);
+      btn.textContent = p.label;
+      btn.addEventListener('click', function () {
+        if (p.slug === 'all') {
+          history.replaceState(null, '', window.location.pathname);
+        } else {
+          window.location.hash = 'by=' + p.slug;
+        }
+        applyFilter(p.slug);
+      });
+      filters.appendChild(btn);
+    });
+  }
+
+  function currentFilterFromHash() {
+    var m = (window.location.hash || '').match(/by=([a-z0-9-]+)/);
+    return m ? m[1] : 'all';
+  }
+
+  fetch('gallery.json')
+    .then(function (r) { return r.json(); })
+    .then(function (entries) {
+      var grid = document.getElementById('grid');
+      grid.innerHTML = '';
+      if (!entries.length) {
+        var empty = document.createElement('p');
+        empty.className = 'empty';
+        empty.textContent = 'No entries yet.';
+        grid.appendChild(empty);
+        return;
+      }
+      entries.forEach(function (e) { grid.appendChild(renderCard(e)); });
+      renderPills(entries);
+      applyFilter(currentFilterFromHash());
+      window.addEventListener('hashchange', function () {
+        applyFilter(currentFilterFromHash());
+      });
+    })
+    .catch(function (err) {
+      var grid = document.getElementById('grid');
+      grid.innerHTML = '<p class="empty">Could not load gallery.json: ' + err.message + '</p>';
+    });
+})();
+</script>
+
+</BODY>
+</HTML>
