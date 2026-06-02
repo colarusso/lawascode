@@ -200,7 +200,7 @@
     "description": "Adding ROI to our CALI subscription by bringing CALI lessons to the faculty. Upload a 1L syllabus or Table of Contents to match your class readings with CALI lessons and ebooks. (Note, works best when you have the subjects covered for that class session listed). Still in Beta. This does have an API call, so it will be turned off after the event so Jenny's credit card does not cry from Claude usage.",
     "url": "https://syllabus-modernizer.netlify.app/",
     "screenshot": "images/showcase/Syllabus-modernizer-app.png",
-    "tags": ["CALI", "syllabus", "teaching"]
+    "tags": ["CALI", "syllabus"]
   },
   {
     "title": "Jennifer's second tool — coming soon",
