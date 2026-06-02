@@ -201,9 +201,9 @@
     "url": "https://syllabus-modernizer.netlify.app/",
     "screenshot": "images/showcase/Syllabus-modernizer-app.png",
     "tags": ["CALI", "syllabus"]
-  },
+   },
   {
-    "title": "Jennifer's second tool — coming soon",
+    "title": "Examsoft Import Assistant",
     "by": "Jenny Wondracek",
     "byURL": "https://www.linkedin.com/in/jennifer-wondracek/",
     "description": "An app to upload banks of questions or old exams to create an Examsoft import file to move multiple-choice, multiple-answer, True-false, Fill-in-the-blank, and essay questions into Examsoft. This tool has a heavier API call to Claude, so it is not live.",
