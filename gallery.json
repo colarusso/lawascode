@@ -194,17 +194,21 @@
     "tags": ["civil rights", "bias"]
   },
   {
-    "title": "Jennifer's tool — coming soon",
-    "by": "Jennifer Wondracek",
-    "description": "Placeholder card. Jennifer will fill this in with a tool from her teaching practice — title, description, screenshot, and links.",
-    "tags": [],
-    "placeholder": true
+    "title": "Syllabus Modernizer",
+    "by": "Jenny Wondracek",
+    "byURL": "https://www.linkedin.com/in/jennifer-wondracek/",
+    "description": "Adding ROI to our CALI subscription by bringing CALI lessons to the faculty. Upload a 1L syllabus or Table of Contents to match your class readings with CALI lessons and ebooks. (Note, works best when you have the subjects covered for that class session listed). Still in Beta. This does have an API call, so it will be turned off after the event so Jenny's credit card does not cry from Claude usage.",
+    "url": "https://syllabus-modernizer.netlify.app/",
+    "screenshot": "images/showcase/Syllabus-modernizer-app.png",
+    "tags": [CALI, syllabus, teaching],
   },
   {
     "title": "Jennifer's second tool — coming soon",
-    "by": "Jennifer Wondracek",
-    "description": "Another placeholder. Edit this entry to add Jennifer's tool details — title, description, screenshot, and links.",
-    "tags": [],
+    "by": "Jenny Wondracek",
+    "byURL": "https://www.linkedin.com/in/jennifer-wondracek/",
+    "description": "An app to upload banks of questions or old exams to create an Examsoft import file to move multiple-choice, multiple-answer, True-false, Fill-in-the-blank, and essay questions into Examsoft. This tool has a heavier API call to Claude, so it is not live.",
+    "screenshot": "images/showcase/Examsoft-Import-Assistant.png",
+    "tags": [Examsoft, Question import tool],
     "placeholder": true
   }
 ]
