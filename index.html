@@ -67,6 +67,7 @@ In this session, we'll pull back the curtain on how we actually build these tool
 		<option value="0">I'll describe what I have in mind.</option>
 		<option value="1">A simulation of competing definitions of fairness</option>
 		<option value="2">An interactive decision tree for Fourth Amendment search and seizure analysis</option>
+		<option value="3">An ediscovery simulation</option>
 	</select>
 	<div id="steps" style="margin-top:15px;display:none;">
 		<p>
@@ -141,6 +142,7 @@ The final product should be a simple single page webapp built with HTML, CSS, an
 			`I'd like to build a tool to`,
 			`I want to build a simulation that lets users explore competing and mutually exclusive definitions of fairness. Here's the idea, we're trying to devise the best policy for what one should do with the toilet seat in a single use toilet. There are two populations of people: those who always leave the seat down (sitters), and those who sometimes have it up and sometimes have it down (standers). The user should be able to change the proportions of the two populations and the ratio of how often the second group splits between needing the seat up or down. There should also be a slider that determines how often the second population skips putting the seat up when peeing and so gets the seat dirty, a cost that is something the next seat down person will have to deal with. It should let you run the simulation and see what the cost is per person (touches + cost of cleaning up after last user in the event they made it dirty) and cost per group/class.`,
 			`I'm trying to put together a very detailed interactive flowchart for how to approach a criminal procedure search and seizure question.  This is for a law school class, it should also mention major cases.  Let's start with a very detailed outilne.`
+			`I want to build a streamlined interactive simulation that teaches law students the basics of the eDiscovery process. The student plays a junior associate working a fictional employment/trade-secret lawsuit and walks through the major phases of electronic discovery, with the centerpiece being a short document-review exercise that lets them compare a few different review approaches (such as keyword search, technology-assisted review, and GenAI-assisted review) on a small set of mock documents. Keep the scope deliberately small — favor a handful of clear, illustrative steps over exhaustive realism, and assume all case facts and documents are hard-coded into the single file.`
 		];
 		
 		var project = document.getElementById('project_select').value;
