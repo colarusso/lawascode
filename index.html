@@ -21,17 +21,9 @@
 <div class="conversation">
 	<h2 class="menu_title"><a href="."><div id="icon"></div></a>Law as Code</h2>
 
-	<!-- Message Banner -->
-	<div id="msg_bar" style="display:block;">Under construction</div>
+	<div id="msg_bar" style="display:none;">Under construction</div>
 
-	<!-- Maybe we want to embed the session here someday
-	<div class="vid_wrapper" style="margin-top: 15px;">
-		<div class="profile_vid">
-			<iframe class="embed_vid" src="https://www.youtube.com/embed/0AEDv9QbWi8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-		</div>
-		I introduce the folks at <a href="https://suffolklitlab.org/events/lit-con/lit-con-2025/">LITCon2025</a> to tabletop role-playing as an alternative to the standard law school <a href="https://www.princetonreview.com/law-school-advice/case-method" alt="_blank">case method</a>. Attendees were invited to play over lunch with students at their tables acting as game masters. The materials mentioned in the video can be found below.
-	</div>
-	-->
+	
 
 	<p>
 		Between us, we've vibe-coded over a dozen interactive teaching tools this year — token visualizers, prompt coaches, hallucination games, automation bias simulations, fairness explorers, document tech galleries. The tools are different, but the pattern has been the same: see a pedagogical gap, describe what you want, and have AI build it.
@@ -40,31 +32,123 @@
 In this session, we'll pull back the curtain on how we actually build these tools — the prompts, the workflow, the iteration, and the judgment calls that make vibe coding work for legal education. We'll show real examples side by side: the pedagogical problem, the tool we built, and what it took to get there. We'll talk honestly about what vibe coding is good at, where it falls apart, and why the people closest to the teaching problem should be the ones building the solution.
 		
 	</p>
-Then we'll turn it over to you. Whether that means building something live in the room or walking away with a workflow and resources you can use that evening, our goal is the same: by the end of this session, you should believe you can do this too — because you can. 
-</p>
-<p>
-No prior coding experience required. That's the whole point.
-
-</p>
-<h3>Resources</h3>
-	<p>
-		Browse the <a href="gallery.html"><strong>Tool Gallery</strong></a> — interactive demos of the teaching tools we've vibe-coded.
+	Then we'll turn it over to you. Whether that means building something live in the room or walking away with a workflow and resources you can use that evening, our goal is the same: by the end of this session, you should believe you can do this too — because you can. 
 	</p>
-<p>Here's a resource library with open-source tools, reusable prompts, and lessons:</p>
-<ul>
+	<center>
+		No prior coding experience required. That's the whole point.
+	</center>
+	<h3>Blog Posts</h3>
+	<p>A collection of writing from the presenters on their experience vibe coding:</p>
+	<ul>
 		<li><a href="https://suffolklitlab.org/algos-bias-due-process-you/" target="_blank">Algos, bias, due process, & you</a></li>
 		<li><a href="https://www.ailawlibrarians.com/2026/03/04/cant-stop-wont-stop-one-semester-eight-vibe-coded-teaching-tools/" target="_blank">Can’t Stop, Won’t Stop: One Semester, Eight Vibe-Coded Teaching Tools</a></li>
 	</ul>
-	
 
-	<div class="footer" style="margin-top: 30px;">
+	<h3>Tool Gallery</h3>
+	<p>
+		Browse the <a href="gallery.html"><strong>Tool Gallery</strong></a> (an interactive demos of the teaching tools we've vibe-coded).
+	</p>
+
+	<h3>Slide Deck</h3>
+	<p>
+		<a href="https://docs.google.com/presentation/d/1gQ8lSw5Z8Ah7IeTjw8qR7sqcJn3cUgVFAVsyCebBz3A/edit?usp=sharing" target="_blank">View the slide deck</a>
+	</p>
+
+	<a name="diy"></a>
+	<h3>Do It Yourself Guide</h3>
+	<p>This tool will help you build simple single-page webapps, what Simon Willison calls <a href="https://simonwillison.net/2025/Dec/10/html-tools/" target="_blank">HTML tools</a>. First you'll need to select a tool to build with (i.e., ChatGPT/OpenAI, Claude/Anthrpic, or Gimini/Google). We recomend going with the tool for which you have a login. After that, you'll need to descibe what you want to build. If you don't have an idea yet, you can use the examples provided.</p>
+	<select id="tool_select" name="tool_select" onchange="showTool()">
+		<option value="choose" SELECTED>Select a tool to build with</option>
+		<option value="openai">ChatGPT/OpenAI</option>
+		<option value="claude">Claude/Anthrpic</option>
+		<option value="google">Gimini/Google</option>
+	</select>
+	<select id="project_select" name="project_select" onchange="showTool()">
+		<option value="choose" SELECTED>Select an idea</option>
+		<option value="0">I'll describe what I have in mind.</option>
+		<option value="1">A simulation of competing definitions of fairness</option>
+		<option value="2">3</option>
+	</select>
+	<div id="steps" style="margin-top:15px;display:none;">
+		<p>
+			<b>Step 1:</b> Describe what you want to build and why. <span id="openai" style="display:none;">
+				<a id="openai_link" href="https://chatgpt.com/?prompt={prompt}" target="_blank">Click here to have ChatGPT help you write some specifications for your project.</a>
+		</span>	
+		<span id="claude" style="display:none;">
+				<a id="claude_link" href="https://claude.ai/new?q={prompt}" target="_blank">Click here to have Claude help you write some specifications for your project.</a>
+		</span>	
+		<span id="google" style="display:none;">
+			Copy the prompt below and paste it into <a href="https://gemini.google.com/app" target="_blank">Gemini</a> to have Google help you write some specifications for your project.
+				<textarea id="google_prompt" style="width: 100%; height: 200px;margin-top: 10px;"></textarea>
+		</span>
+		
+		<div id="step2" style="margin-top:15px;">
+			<p>
+				<b>Step 2:</b> Once you have your specifications ready, ask the tool to go ahead and build it, or paste the specifications into the tool to <a href="https://aistudio.google.com/apps" target="_blank">Google's AI Studio</a>, <a href="https://replit.com/" target="_blank">Replit</a>, or <a href="https://lovable.dev/" target="_blank">Lovable.dev</a> to get started. The first version probably won't be perfect, but that's ok! You can ask the tool to fix any problems. <i>If you want to make use of an LLM in your project, that's a bit more advanced than a simple web app. So we suggest using Google's AI Studio below and removing the line that starts <code style="background-color: #f0f0f0;">The final product should be a simple single page webapp built with...</code> from your promopt in Step 1.</i>
+			</p>
+			<p>
+				<b>Step 3:</b> Once you have something you like, share it with your students by uploading it to a web server,<sup>&dagger;</sup> or if you used AI Studio, Replit, or Lovable.dev, publish and share. Consider uploading your project to a new chat and asking it to produce some test you can run to make sure everything is working as expected.
+			</p>
+			<hr>
+			<font size="-1"><sup>&dagger;</sup> If you don't have access to a web server, making a GitHub account is a free and easy way share your file. You can upload it to a GitHub repository and then enable GitHub Pages to make it publicly accessible on the web. Here's a helpful guide on how: <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site" target="_blank">Creating a GitHub Pages site</a>.</font>
+		</div>
+	</div>
+
+	
+	<div class="footer" style="margin-top: 30px;margin-bottom: 40px;">
 		<span class="byline">
-			By <a href="https://www.davidcolarusso.com/" target="_blank">David Colarusso</a> &amp; 
-			<a href="https://moritzlaw.osu.edu/rebecca-fordon" target="_blank">Rebecca Fordon</a>
+			By <a href="https://www.davidcolarusso.com/" target="_blank">David Colarusso,</a> 
+			<a href="https://moritzlaw.osu.edu/rebecca-fordon" target="_blank">Rebecca Fordon</a> &amp; 
+			<a href="https://www.linkedin.com/in/jennifer-wondracek/" target="_blank">Jennifer Wondracek</a>
+		</span>
+		<span class="byline" style="float:right">
+			<a href="https://2026.calicon.org/sessions/vibe-coding-legal-education-pedagogical-gap-working-tool" target="_blank">CALI Con 2026 Session</a>
 		</span>
 	</div>
-	
-</div>
 
+
+
+</div>
+<script>
+	document.getElementById('tool_select').value = 'choose';
+	document.getElementById('project_select').value = 'choose';
+	function showTool() {
+		var prompt_text = `You are a helpful assistant tasked with helping me create a set of specifications for building an simple interactive learning aid. These specifications should be detailed enough that a developer could build the tool without needing to ask any follow up questions, including not only what the tool should do, but also how it should look, and what's going on "under the hood." You, however, should ask me as many questions as you need to craft a good set of specifications. 
+		
+The final product should be a simple single page webapp built with HTML, CSS, and JavaScript all in one file. No React. No frameworks. Just a single file that I can open in a web browser and have the tool work.`
+
+		var problem_desc = [
+			`I'd like to build a tool to`,
+			`I want to build a simulation that lets users explore competing and mutually exclusive definitions of fairness. Here's the idea, we're trying to devise the best policy for what one should do with the toilet seat in a single use toilet. There are two populations of people: those who always leave the seat down (sitters), and those who sometimes have it up and sometimes have it down (standers). The user should be able to change the proportions of the two populations and the ratio of how often the second group splits between needing the seat up or down. There should also be a slider that determines how often the second population skips putting the seat up when peeing and so gets the seat dirty, a cost that is something the next seat down person will have to deal with. It should let you run the simulation and see what the cost is per person (touches + cost of cleaning up after last user in the event they made it dirty) and cost per group/class.`,
+			``
+		];
+		
+		var project = document.getElementById('project_select').value;
+		prompt_text += `\n\n${problem_desc[parseInt(project)]}`;
+
+		document.getElementById('google_prompt').value = prompt_text;
+
+		document.querySelector('#openai_link').setAttribute('href', `https://chatgpt.com/?prompt=${encodeURIComponent(prompt_text)}`);
+		document.querySelector('#claude_link').setAttribute('href', `https://claude.ai/new?q=${encodeURIComponent(prompt_text)}`);
+
+
+		document.getElementById('openai').style.display = 'none';
+		document.getElementById('claude').style.display = 'none';
+		document.getElementById('google').style.display = 'none';
+		var tool_choice = document.getElementById('tool_select').value;
+		if ((tool_choice=="openai" || tool_choice=="claude" || tool_choice=="google") && (project!="choose")) {
+			document.getElementById(tool_choice).style.display = 'inline';
+			document.getElementById('steps').style.display = 'inline';
+			document.getElementsByClassName('footer')[0].style.marginBottom = '75%';
+			document.querySelector('a[name="diy"]').scrollIntoView({behavior: "smooth"});
+		} else if (tool_choice!="openai" && tool_choice!="claude" && tool_choice!="google") {
+			alert('Please select a tool to build with, then select an idea.');
+			document.getElementById('project_select').value = 'choose';
+			document.getElementById('steps').style.display = 'none';
+		} else if (project=="choose") {
+			document.getElementById('steps').style.display = 'none';
+		}
+	}
+</script>
 </BODY>
 </HTML>
