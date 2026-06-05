@@ -202,6 +202,15 @@
     "screenshot": "images/showcase/Syllabus-modernizer-app.png",
     "tags": ["CALI", "syllabus"]
    },
+    {
+    "title": "Lawyer Due Diligence for Cloud & Third-Party Tech Vendors",
+    "by": "Jenny Wondracek",
+    "byURL": "https://www.linkedin.com/in/jennifer-wondracek/",
+    "description": "Jenny attended Debbie Ginsburg's ABA Formal Opinion 512 and Its Impact on Law Libraries sesson at CALI. While there, she mentioned Ohio ethics opinion 2017-5, which explains how a lawyer needs to vet tech vendors. She had Claud search for other opinions (it found 32 total) and then asked it to visualize in map format, thus this tool. NOTE: IT HAS NOT BEEN VETTED FOR ACCURACY - this is 30 min from research to visualization - use only for an example of the technology capabilities",
+    "url": "https://claude.ai/public/artifacts/685422b6-1072-45a4-9dbc-5d1f2ddcce63",
+    "screenshot": "images/showcase/cloud-vendor-ethics-map.png",
+    "tags": ["Cloud Vendor", "Ethics"]
+   },
   {
     "title": "Examsoft Import Assistant",
     "by": "Jenny Wondracek",
